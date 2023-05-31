@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "666972059694",
+    "project_id": "mynotes-proj-neal",
+    "storage_bucket": "mynotes-proj-neal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666972059694:android:24fb0d8b51de854ea687bf",
+        "android_client_info": {
+          "package_name": "com.example.learningdart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL1egRMNvxVWng9Jy3bQOXPv4T7k_vzIM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
