@@ -1,4 +1,3 @@
-import 'dart:developer' as console show log;
 import 'package:flutter/material.dart';
 // firbase imports
 import 'package:firebase_auth/firebase_auth.dart';
@@ -25,6 +24,7 @@ void main() {
         loginRoute :(context) => const LoginView(),
         registerRoute:(context) => const RegisterView(),
         notesRoute:(context) => const NotesView(),
+        verifyEmailRoute: (context) => const VerifyEmailView(),
       },
     ),);
 }
