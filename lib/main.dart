@@ -20,6 +20,7 @@ void main() {
         '/login/':(context) => const LoginView(),
         '/register/':(context) => const RegisterView(),
         '/verify_email_view/':(context) => const VerifyEmailView(),
+        '/notes/':(context) => const NotesView(),
       },
     ),);
 }
@@ -40,7 +41,7 @@ class HomePage extends StatelessWidget {
             final user = FirebaseAuth.instance.currentUser;
             if (user != null){
               if (user.emailVerified){
-                return NotesView();
+                return const NotesView();
               } else {
                 return const VerifyEmailView();
               }
@@ -65,11 +66,6 @@ class NotesView extends StatefulWidget {
 }
 
 class _NotesViewState extends State<NotesView> {
-  void _signOut(){
-    FirebaseAuth.instance.signOut();
-    final user = FirebaseAuth.instance.currentUser;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
