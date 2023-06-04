@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:learningdart/constants/routes.dart';
 
 class VerifyEmailView extends StatefulWidget {
   const VerifyEmailView({super.key});
@@ -23,7 +24,7 @@ class _VerifyEmailViewState extends State<VerifyEmailView> {
           TextButton(onPressed: (){
             _signOut();
             Navigator.of(context).pushNamedAndRemoveUntil(
-                '/login/', 
+                loginRoute, 
                 (route) => false);
           }, 
           child: const Text('Sign-Out')
