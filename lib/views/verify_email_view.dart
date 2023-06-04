@@ -10,12 +10,24 @@ class VerifyEmailView extends StatefulWidget {
 }
 
 class _VerifyEmailViewState extends State<VerifyEmailView> {
+  void _signOut(){
+    FirebaseAuth.instance.signOut();
+    final user = FirebaseAuth.instance.currentUser;
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Verify email')),
       body: Column(
         children: [
+          TextButton(onPressed: (){
+            _signOut();
+            Navigator.of(context).pushNamedAndRemoveUntil(
+                '/login/', 
+                (route) => false);
+          }, 
+          child: const Text('Sign-Out')
+          ),
           const Text('Please verify your email address'),
           TextButton(
             onPressed: () async {
